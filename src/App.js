@@ -1,11 +1,13 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Provider} from 'urql';
+import client from './graphql/client';
+import RootNavigator from './navigator/RootNavigator';
 
 const App = () => {
   return (
-    <View>
-      <Text></Text>
-    </View>
+    <Provider value={client}>
+      <RootNavigator />
+    </Provider>
   );
 };
 

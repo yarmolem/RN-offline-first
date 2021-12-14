@@ -1,0 +1,8 @@
+query getPosts($limit: Int!) {
+  getPosts(limit: $limit) {
+    id
+    title
+    image
+    content
+  }
+}
